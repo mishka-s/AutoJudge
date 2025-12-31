@@ -1,5 +1,11 @@
 # 🧠 AutoJudge: Automatic Programming Problem Difficulty Estimation
 
+#### Mishka Singla
+
+#### 24116052
+
+#### ECE (B.Tech. 2nd Year)
+
 ## 📌 Project Overview
 
 Online competitive programming platforms such as **Codeforces, CodeChef, and Kattis** assign difficulty labels (Easy / Medium / Hard) and numerical difficulty scores to programming problems. These labels are largely based on **human judgment and community feedback**, making the process subjective and time-consuming.
@@ -30,6 +36,10 @@ A **Streamlit web application** is provided where users can paste a new problem 
 ---
 
 ## 🗂 Dataset Description
+
+The dataset is taken from this repository. 
+
+https://www.google.com/url?q=https://github.com/AREEG94FAHAD/TaskComplexityEval-24&sa=D&source=editors&ust=1767188820861202&usg=AOvVaw3MOyl1JRoI3VdQ01DE3s6W
 
 Each data sample contains:
 
