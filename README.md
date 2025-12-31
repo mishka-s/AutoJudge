@@ -181,19 +181,56 @@ This corresponds to a **~20% relative error**, which is reasonable given:
 
 ---
 
-## 🌐 Streamlit Web Application
+## 🌐 Streamlit Web Interface
 
-A **Streamlit-based interface** allows users to:
+The project includes a **Streamlit-based web interface** that allows users to interact with the trained models without requiring any technical setup or retraining.
 
-- Paste:
-  - Problem description
-  - Input description
-  - Output description
-- Get:
-  - Predicted difficulty class
-  - Predicted difficulty score
+### 🔹 Interface Features
 
-The app loads **pre-trained models** and does not retrain at runtime.
+The web application provides:
+- Text input fields for:
+  - **Problem Description**
+  - **Input Description**
+  - **Output Description**
+- A **Predict** button to trigger inference
+- Real-time display of:
+  - **Predicted Difficulty Class** (Easy / Medium / Hard)
+  - **Predicted Difficulty Score** (numerical value)
+
+---
+
+### 🔹 How It Works
+
+1. The user pastes the problem text into the input fields.
+2. The text fields are combined and preprocessed.
+3. The same **TF-IDF vectorizers and feature engineering pipeline** used during training are applied.
+4. The trained models are loaded from disk:
+   - Linear SVM for difficulty classification
+   - Random Forest Regressor for difficulty score prediction
+5. Predictions are displayed instantly on the interface.
+
+📌 The application performs **inference only** and does not retrain models at runtime.
+
+---
+
+### 🔹 Technology Used
+
+- **Streamlit** for building the interactive web UI
+- **joblib** for loading serialized models
+- **scikit-learn** for model inference
+- **NumPy / SciPy** for feature handling
+
+---
+
+### 🔹 Purpose of the Web Interface
+
+The web interface demonstrates the practical applicability of the system by:
+- Making the model accessible to non-technical users
+- Allowing real-time testing on unseen problems
+- Providing a clean and intuitive way to showcase results
+
+This interface serves as a lightweight deployment layer for the trained machine learning pipeline.
+
 
 ### ▶️ Run the Project Locally
 
