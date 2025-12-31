@@ -195,11 +195,33 @@ A **Streamlit-based interface** allows users to:
 
 The app loads **pre-trained models** and does not retrain at runtime.
 
-### ▶️ Run Locally
+### ▶️ Run the Project Locally
 
+Follow the steps below to run the AutoJudge application on your local machine.
+
+#### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/mishka-s/AutoJudge.git
+cd AutoJudge
+
+```
+
+#### 2️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
 
+```
+
+#### 3️⃣ Run the Streamlit Application
+
+```bash
 streamlit run app.py
+
+```
+
+Paste a problem description, input description, and output description into the interface to obtain the predicted difficulty class and difficulty score.
 
 ## 📁 Repository Structure
 
