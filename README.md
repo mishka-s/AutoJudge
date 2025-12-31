@@ -188,9 +188,8 @@ The app loads **pre-trained models** and does not retrain at runtime.
 ### ▶️ Run Locally
 
 pip install -r requirements.txt
-streamlit run app.py
 
-## 📁 Repository Structure
+streamlit run app.py
 
 ## 📁 Repository Structure
 
