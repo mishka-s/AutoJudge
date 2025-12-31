@@ -260,6 +260,11 @@ streamlit run app.py
 
 Paste a problem description, input description, and output description into the interface to obtain the predicted difficulty class and difficulty score.
 
+## Link to the demo video
+
+   https://drive.google.com/file/d/12rPp42BXvyZm_7rlG5naIhGuxMy_FHuP/view?usp=drive_link
+
+
 ## 📁 Repository Structure
 
 ```text
