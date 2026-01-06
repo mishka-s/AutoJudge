@@ -181,6 +181,31 @@ Regression consistently outperformed classification in reliability.
 
 ---
 
+## Trained Models and Artifacts
+
+The `models/` directory contains all trained models and preprocessing components required for inference. Each artifact is serialized using `joblib` and loaded at runtime to ensure consistency between training and deployment.
+
+### Contents
+
+| File | Purpose |
+|----|----|
+| `svm_classifier.pkl` | Predicts difficulty class (Easy / Medium / Hard) |
+| `rf_regressor.pkl` | Predicts numerical difficulty score |
+| `tfidf_classifier.pkl` | TF-IDF vectorizer for classification |
+| `tfidf_regressor.pkl` | TF-IDF vectorizer for regression |
+| `feature_scaler.pkl` | Scales handcrafted structural features |
+
+### 🔹 Inference Pipeline
+
+1. Input text is transformed using pre-fitted TF-IDF vectorizers.
+2. Structural features are extracted and scaled using the saved scaler.
+3. Predictions are generated using:
+   - Linear SVM for classification
+   - Random Forest Regressor for regression
+
+This design avoids retraining during inference and ensures reproducible predictions.
+
+
 ## Streamlit Web Interface
 
 The project includes a **Streamlit-based web interface** that allows users to interact with the trained models without requiring any technical setup or retraining.
