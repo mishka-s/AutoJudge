@@ -1,4 +1,4 @@
-# 🧠 AutoJudge: Automatic Programming Problem Difficulty Estimation
+# AutoJudge: Automatic Programming Problem Difficulty Estimation
 
 #### Mishka Singla
 
@@ -6,7 +6,7 @@
 
 #### ECE (B.Tech. 2nd Year)
 
-## 📌 Project Overview
+## Project Overview
 
 Online competitive programming platforms such as **Codeforces, CodeChef, and Kattis** assign difficulty labels (Easy / Medium / Hard) and numerical difficulty scores to programming problems. These labels are largely based on **human judgment and community feedback**, making the process subjective and time-consuming.
 
@@ -24,7 +24,7 @@ A **Streamlit web application** is provided where users can paste a new problem 
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Use **only textual content** of programming problems
 - Build:
@@ -35,7 +35,7 @@ A **Streamlit web application** is provided where users can paste a new problem 
 
 ---
 
-## 🗂 Dataset Description
+## Dataset Description
 
 The dataset is taken from this repository. 
 
@@ -50,11 +50,11 @@ Each data sample contains:
 - `problem_class` → Easy / Medium / Hard
 - `problem_score` → numerical difficulty value
 
-📌 The dataset is assumed to be **pre-labeled** and is not created or annotated as part of this project.
+ The dataset is assumed to be **pre-labeled** and is not created or annotated as part of this project.
 
 ---
 
-## ⚙️ Text Preprocessing
+## Text Preprocessing
 
 All textual fields are **combined into a single input string**:
 
@@ -68,7 +68,7 @@ Preprocessing steps:
 
 ---
 
-## 🧩 Feature Engineering
+## Feature Engineering
 
 To capture both semantic and structural information, a **hybrid feature representation** was used.
 
@@ -99,7 +99,7 @@ All features are concatenated as:
 
 ---
 
-## 🧪 Classification Models (Difficulty Class)
+## Classification Models (Difficulty Class)
 
 ### Models Tried
 
@@ -111,7 +111,7 @@ All features are concatenated as:
 
 ---
 
-### ⚠️ Problems Faced During Classification
+### Problems Faced During Classification
 
 1. **Severe Class Imbalance**
    - “Hard” problems dominated the dataset
@@ -126,23 +126,23 @@ All features are concatenated as:
 
 ---
 
-### ✅ Final Classification Model
+### Final Classification Model
 
 - **Linear Support Vector Machine (LinearSVC)**
 - TF-IDF + structural features
 - `class_weight="balanced"`
 
-### 📊 Classification Results
+### Classification Results
 
 - Accuracy ≈ **47%**
 - Hard problems are identified more reliably
 - Easy vs Medium confusion remains high
 
-📌 This performance is **realistic** for a text-only difficulty classification task.
+This performance is **realistic** for a text-only difficulty classification task.
 
 ---
 
-## 🧪 Regression Models (Difficulty Score)
+## Regression Models (Difficulty Score)
 
 Unlike classification, predicting a **continuous score** is often more stable.
 
@@ -156,7 +156,7 @@ Unlike classification, predicting a **continuous score** is often more stable.
 
 ---
 
-### ✅ Final Regression Model
+### Final Regression Model
 
 - **Random Forest Regressor**
 - TF-IDF + structural features
@@ -167,7 +167,7 @@ Unlike classification, predicting a **continuous score** is often more stable.
 
 ---
 
-### 📊 Regression Evaluation
+### Regression Evaluation
 
 - **MAE ≈ 1.7**
 - **RMSE ≈ 2.0**
@@ -177,11 +177,11 @@ This corresponds to a **~20% relative error**, which is reasonable given:
 - Subjective ground truth
 - Use of text-only information
 
-📌 Regression consistently outperformed classification in reliability.
+Regression consistently outperformed classification in reliability.
 
 ---
 
-## 🌐 Streamlit Web Interface
+## Streamlit Web Interface
 
 The project includes a **Streamlit-based web interface** that allows users to interact with the trained models without requiring any technical setup or retraining.
 
@@ -209,7 +209,7 @@ The web application provides:
    - Random Forest Regressor for difficulty score prediction
 5. Predictions are displayed instantly on the interface.
 
-📌 The application performs **inference only** and does not retrain models at runtime.
+The application performs **inference only** and does not retrain models at runtime.
 
 ---
 
@@ -232,7 +232,7 @@ The web interface demonstrates the practical applicability of the system by:
 This interface serves as a lightweight deployment layer for the trained machine learning pipeline.
 
 
-### ▶️ Run the Project Locally
+### Run the Project Locally
 
 Follow the steps below to run the AutoJudge application on your local machine.
 
@@ -265,7 +265,7 @@ Paste a problem description, input description, and output description into the 
    [https://drive.google.com/file/d/12rPp42BXvyZm_7rlG5naIhGuxMy_FHuP/view?usp=drive_link](https://drive.google.com/file/d/1vlAEnO3Mn_CQcvebRg4ZBM4Xi3P8ENFd/view?usp=drive_link)
 
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 acm/
@@ -288,9 +288,9 @@ acm/
 
 ```
 
-📌 Large model files are tracked using Git LFS.
+Large model files are tracked using Git LFS.
 
-## 🧠 Key Learnings & Insights
+## Key Learnings & Insights
 
 - Difficulty classification is **harder than score regression**
 - Text alone has limited ability to distinguish Easy vs Medium
@@ -300,7 +300,7 @@ acm/
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 - Parse constraint values explicitly (e.g., `n ≤ 10^5`)
 - Hierarchical classification (Easy vs Non-Easy)
@@ -309,7 +309,7 @@ acm/
 
 ---
 
-## 📌 Conclusion
+## Conclusion
 
 **AutoJudge** demonstrates a complete end-to-end NLP + ML pipeline for estimating programming problem difficulty using textual data alone. While classification accuracy is inherently limited by subjective labels, regression-based difficulty estimation provides meaningful and stable predictions. The project highlights both the **potential and limitations** of automated difficulty estimation.
 
